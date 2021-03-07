@@ -17,7 +17,7 @@ ui <- fluidPage(
   
   theme = shinytheme('lumen'),
   # App title ----
-  titlePanel("AML Prognostication"),
+  titlePanel("AML Genomic Subclassification"),
   tags$hr(),
   sidebarLayout(
     sidebarPanel(
@@ -73,7 +73,7 @@ server <- function(input, output) {
       theme(axis.text.x = element_blank(),
             axis.ticks.x = element_blank()) +
       scale_fill_manual(values = cluster_colors,
-                        labels = c('Low Risk', 'Intermediate-Low Risk', 'Intermediate-High Risk', 'High Risk')) +
+                        labels = c('Genomic Cluster 1', 'Genomic Cluster 2', 'Genomic Cluster 3', 'Genomic Cluster 4')) +
       guides(fill=guide_legend(title=''))
     
     ## Survival ##
